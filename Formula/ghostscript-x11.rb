@@ -72,7 +72,7 @@ class GhostscriptX11 < Formula
     system configure, *args, *std_configure_args
 
     # Install binaries and libraries
-    system "make", "install"
+    system "make", "libgs"
     ENV.deparallelize { system "make", "install-so" } unless OS.mac?
 
     (pkgshare/"fonts").install resource("fonts")
